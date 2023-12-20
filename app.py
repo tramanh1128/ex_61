@@ -4,6 +4,10 @@ import numpy as np
 
 app = Flask(__name__)
 
+@app.route("/")
+def hello():
+    return "Index Page"
+
 @app.route('/num_start')
 def num_start():
     return render_template('plot.html')
